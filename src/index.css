@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #e6af5d;
+  --dark-color: #30373f;
+  --secondary-color: #616161;
+  --grey-color: #f6f4f5;
+  --white-color: #ffffff;
+  --body-fonts: 'Plus Jakarta Sans', sans-serif;
+  --title-fonts: 'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+  /* padding: 0;margin: 0; */
+  /* overflow: hidden; */
+  /* background-color: #30373f; */
+  padding: 0;
+  margin: 0;
+  /* overflow: hidden; */
+    overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
+}
