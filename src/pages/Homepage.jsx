@@ -14,7 +14,6 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import "leaflet/dist/leaflet.css";
 import { useTheme } from "@emotion/react";
-import { useState } from "react";
 import "leaflet/dist/leaflet.css";
 import {
   basketCableTray,
@@ -110,7 +109,7 @@ const Homepage = () => {
               sx={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover", // Ensures the image covers the entire box
+                objectFit: "cover",
               }}
             />
             <Box
@@ -133,13 +132,17 @@ const Homepage = () => {
                 color: "white",
               }}
             >
-              <Typography variant="h2" component="h1" gutterBottom>
+              <Typography
+                variant="h2"
+                // component="h1"
+                gutterBottom
+              >
                 {item.title}
               </Typography>
               <Typography
                 variant="h6"
                 color={"white"}
-                component="p"
+                // component="p"
                 gutterBottom
               >
                 {item.description}
@@ -157,8 +160,8 @@ const Homepage = () => {
           backgroundColor: "#ffba00",
           backgroundImage: `url(${gridImage})`,
           padding: "50px 0",
-          // position: "relative",
           height: "100%",
+          marginTop: "-5px",
           p: {
             xs: theme.customPadding.xs,
             sm: theme.customPadding.sm,
@@ -173,7 +176,7 @@ const Homepage = () => {
           fontWeight={"500"}
           textTransform="capitalize"
           variant="h1"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-duration={theme.animationSpeed.medium}
         >
           Welcome
@@ -182,6 +185,8 @@ const Homepage = () => {
           variant="body1"
           color={"black"}
           textAlign={"center"}
+          data-aos="fade-left"
+          data-aos-duration={theme.animationSpeed.medium}
           sx={{ marginBottom: 4, wordSpacing: "2px" }}
         >
           {" "}
@@ -191,13 +196,21 @@ const Homepage = () => {
         </Typography>
 
         <Container maxWidth="lg">
-          <Grid container spacing={2} sx={{ height: "100%" }}>
+          <Grid
+            container
+            spacing={2}
+            sx={{ height: "100%" }}
+            data-aos="fade-right"
+            data-aos-duration={theme.animationSpeed.medium}
+          >
             {/* Text Section */}
             <Grid item xs={12} md={7}>
               <Typography
                 variant="h2"
                 color={"#333"}
                 sx={{ fontWeight: "bold", marginBottom: 2 }}
+                data-aos="fade-right"
+                data-aos-duration={theme.animationSpeed.medium}
               >
                 Hutaib Electricals
               </Typography>
@@ -205,6 +218,8 @@ const Homepage = () => {
                 variant="body1"
                 color={"black"}
                 sx={{ marginBottom: 4 }}
+                data-aos="fade-right"
+                data-aos-duration={theme.animationSpeed.medium}
               >
                 We are Pune based Exporters, Manufacturers, and Suppliers of
                 Cable Trays, Raceways, WireMesh & industrial fabrications.
@@ -213,6 +228,8 @@ const Homepage = () => {
                 variant="body1"
                 color={"black"}
                 sx={{ marginBottom: 4, wordSpacing: "2px" }}
+                data-aos="fade-right"
+                data-aos-duration={theme.animationSpeed.medium}
               >
                 The company has expertise in Manufacturing and Exporting
                 products like perforated cable trays, ladder type cable trays,
@@ -222,14 +239,14 @@ const Homepage = () => {
                 is located at Burhani Industrial Area in Pune which is a
                 renowned industrial area.
               </Typography>
-              <Box sx={{backgroundColor:'red', width:"250px"}}>
-              <CustomButton
-                    btnLabel={"ABOUT US"}
-                    bgHoverColor={theme.palette.secondary.main}
-                    bgColor={theme.palette.light.main}
+              <Box sx={{ backgroundColor: "red", width: "250px" }}>
+                <CustomButton
+                  btnLabel={"ABOUT US"}
+                  bgHoverColor={theme.palette.secondary.main}
+                  bgColor={theme.palette.light.main}
                   textColor={theme.palette.light.main}
-                  link={'about'}
-                  />
+                  link={"about"}
+                />
               </Box>
             </Grid>
 
@@ -245,8 +262,16 @@ const Homepage = () => {
                 height: "400px",
                 alignItems: "center",
               }}
+              data-aos="fade-left"
+              data-aos-duration={theme.animationSpeed.medium}
             >
-              <img src={file} width={"100%"} height={"100%"}/>
+              <img
+                src={file}
+                width={"100%"}
+                height={"100%"}
+                data-aos="fade-left"
+                data-aos-duration={theme.animationSpeed.medium}
+              />
             </Grid>
           </Grid>
 
@@ -281,7 +306,7 @@ const Homepage = () => {
             md: theme.customPadding.md,
             lg: theme.customPadding.lg,
           },
-          marginTop:3
+          marginTop: 3,
         }}
       >
         <Typography
@@ -290,12 +315,17 @@ const Homepage = () => {
           fontWeight={"500"}
           textTransform="capitalize"
           variant="h3"
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration={theme.animationSpeed.medium}
         >
           We are expert in
         </Typography>
-        <Grid container spacing={2}>
+        <Grid
+          container
+          spacing={2}
+          data-aos="fade-down"
+          data-aos-duration={theme.animationSpeed.medium}
+        >
           {[
             {
               icon: icons1,
@@ -329,6 +359,8 @@ const Homepage = () => {
                   backgroundColor: "white", // Ensure background is defined to avoid overlap
                   overflow: "hidden", // Prevent content overflow
                 }}
+                data-aos="fade-down"
+                data-aos-duration={theme.animationSpeed.medium}
               >
                 <Box
                   sx={{
@@ -340,15 +372,34 @@ const Homepage = () => {
                     padding: 2,
                   }}
                 >
-                  <img src={item.icon} width={100} alt={item.title} />
-                  <Typography variant="h4" sx={{ marginTop: 2 }}>
+                  <img
+                    src={item.icon}
+                    width={100}
+                    alt={item.title}
+                    data-aos="zoom-in-right"
+                    data-aos-duration={theme.animationSpeed.medium}
+                  />
+                  <Typography
+                    variant="h4"
+                    sx={{ marginTop: 2 }}
+                    data-aos="zoom-in-left"
+                    data-aos-duration={theme.animationSpeed.medium}
+                  >
                     {item.title}
                   </Typography>
-                  <Typography sx={{ marginTop: 2 }}>
+                  <Typography
+                    sx={{ marginTop: 2 }}
+                    data-aos="zoom-in-left"
+                    data-aos-duration={theme.animationSpeed.medium}
+                  >
                     {item.description}
                   </Typography>
                 </Box>
-                <Box sx={{ marginTop: "auto", paddingTop: 2 }}>
+                <Box
+                  sx={{ marginTop: "auto", paddingTop: 2 }}
+                  data-aos="zoom-in-left"
+                  data-aos-duration={theme.animationSpeed.medium}
+                >
                   <CustomButton
                     btnLabel={"Read More"}
                     bgHoverColor={theme.palette.secondary.main}
@@ -382,7 +433,7 @@ const Homepage = () => {
           },
         }}
       >
-          <Typography
+        <Typography
           sx={{ textAlign: "center" }}
           color={theme.palette.secondary.main}
           fontWeight={"500"}
@@ -395,16 +446,31 @@ const Homepage = () => {
         </Typography>
         <Grid container spacing={4}>
           {products.map((product, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={3}
+              key={index}
+              data-aos="fade-up-right"
+              data-aos-duration={theme.animationSpeed.medium}
+            >
               <Card>
                 <CardMedia
                   component="img"
                   height="220"
                   image={product.img}
                   alt={product.title}
+                  data-aos="fade-up-right"
+                  data-aos-duration={theme.animationSpeed.medium}
                 />
                 <CardContent>
-                  <Typography variant="h6" gutterBottom>
+                  <Typography
+                    variant="h6"
+                    gutterBottom
+                    data-aos="fade-up-right"
+                    data-aos-duration={theme.animationSpeed.medium}
+                  >
                     {product.title}
                   </Typography>
                   <CustomButton
@@ -412,10 +478,9 @@ const Homepage = () => {
                     textColor={theme.palette.light.main}
                     bgColor={theme.palette.primary.main}
                     bgHoverColor={theme.palette.secondary.main}
+                    animation={"fade-up-right"}
+                    animationDuration={theme.animationSpeed.medium}
                   />
-                  {/* <Button variant="contained" color="primary" href={product.link}>
-                  Read More
-                </Button> */}
                 </CardContent>
               </Card>
             </Grid>
@@ -424,123 +489,6 @@ const Homepage = () => {
       </Container>
     );
   };
-
-  // const OurRecentBlogs = () => {
-  //   return (
-  //     <Box
-  //       marginTop={5}
-  //       sx={{
-  //         p: {
-  //           xs: theme.customPadding.xs,
-  //           sm: theme.customPadding.sm,
-  //           md: theme.customPadding.md,
-  //           lg: theme.customPadding.lg,
-  //         },
-  //       }}
-  //     >
-  //       <Typography
-  //         sx={{ textAlign: "center" }}
-  //         color={theme.palette.secondary.main}
-  //         fontWeight={"500"}
-  //         textTransform="capitalize"
-  //         variant="h3"
-  //         data-aos="fade-left"
-  //         data-aos-duration={theme.animationSpeed.medium}
-  //       >
-  //         Our Recent Blogs
-  //       </Typography>
-  //       <Carousel
-  //         useKeyboardArrows={true}
-  //         autoPlay
-  //         infiniteLoop
-  //         showIndicators={false}
-  //       >
-  //         {RecentBlogData.map((blog, index) => (
-  //           <Box
-  //             key={index}
-  //             sx={{
-  //               display: "flex",
-  //               flexDirection: {
-  //                 xs: "column",
-  //                 md: "row",
-  //               },
-  //               alignItems: "start",
-  //               justifyContent: "space-between",
-  //               gap: 2,
-  //               width: "100%",
-  //               height: "auto",
-  //             }}
-  //           >
-  //             <Box
-  //               sx={{
-  //                 width: {
-  //                   xs: "100%",
-  //                   md: "50%",
-  //                 },
-
-  //                 height: {
-  //                   xs: "100%",
-  //                   md: "50%",
-  //                   lg: "300px",
-  //                 },
-  //               }}
-  //             >
-  //               <Box
-  //                 sx={{
-  //                   border: `2px solid ${theme.palette.primary.main}`,
-  //                   width: "100%",
-  //                   height: "100%",
-  //                   borderRadius: "5px",
-  //                   overflow: "hidden",
-  //                 }}
-  //               >
-  //                 <img
-  //                   src={blog.image}
-  //                   alt={blog.title}
-  //                   style={{
-  //                     width: "100%",
-  //                     height: "auto",
-  //                     objectFit: "contain",
-  //                     borderRadius: "5px",
-  //                   }}
-  //                 />
-  //               </Box>
-  //             </Box>
-  //             <Box
-  //               sx={{
-  //                 width: {
-  //                   xs: "100%",
-  //                   md: "50%",
-  //                 },
-  //                 padding: {
-  //                   xs: "10px 0",
-  //                   md: "0 20px",
-  //                 },
-  //               }}
-  //             >
-  //               <Typography
-  //                 variant="h4"
-  //                 color={theme.palette.primary.main}
-  //                 textAlign="start"
-  //               >
-  //                 {blog.title}
-  //               </Typography>
-  //               <Typography marginTop={2} textAlign="start">
-  //                 {blog.date}
-  //               </Typography>
-  //               <Box>
-  //                 <Typography marginTop={2} textAlign="start">
-  //                   {blog.description} <Link>Read more</Link>
-  //                 </Typography>
-  //               </Box>
-  //             </Box>
-  //           </Box>
-  //         ))}
-  //       </Carousel>
-  //     </Box>
-  //   );
-  // };
-
 
   const MyCustomButton = styled("button")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -554,7 +502,7 @@ const Homepage = () => {
       backgroundColor: theme.palette.primary.dark,
     },
   }));
-  
+
   const OurRecentBlogs = () => {
     return (
       <Box
@@ -567,6 +515,8 @@ const Homepage = () => {
             lg: theme.customPadding.lg,
           },
         }}
+        data-aos="fade-up"
+        data-aos-duration={theme.animationSpeed.medium}
       >
         <Typography
           sx={{ textAlign: "center" }}
@@ -574,7 +524,7 @@ const Homepage = () => {
           fontWeight={"500"}
           textTransform="capitalize"
           variant="h3"
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration={theme.animationSpeed.medium}
         >
           Our Recent Blogs
@@ -587,14 +537,28 @@ const Homepage = () => {
             showIndicators={false}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
               hasPrev && (
-                <MyCustomButton onClick={onClickHandler} style={{ position: "absolute", bottom: "-50px", left: "calc(50% - 60px)" }}>
+                <MyCustomButton
+                  onClick={onClickHandler}
+                  style={{
+                    position: "absolute",
+                    bottom: "-50px",
+                    left: "calc(50% - 60px)",
+                  }}
+                >
                   Prev
                 </MyCustomButton>
               )
             }
             renderArrowNext={(onClickHandler, hasNext, label) =>
               hasNext && (
-                <MyCustomButton onClick={onClickHandler} style={{ position: "absolute", bottom: "-50px", right: "calc(50% - 60px)" }}>
+                <MyCustomButton
+                  onClick={onClickHandler}
+                  style={{
+                    position: "absolute",
+                    bottom: "-50px",
+                    right: "calc(50% - 60px)",
+                  }}
+                >
                   Next
                 </MyCustomButton>
               )
@@ -615,6 +579,8 @@ const Homepage = () => {
                   width: "100%",
                   height: "auto",
                 }}
+                data-aos="fade-up"
+                data-aos-duration={theme.animationSpeed.medium}
               >
                 <Box
                   sx={{
@@ -628,6 +594,8 @@ const Homepage = () => {
                       lg: "300px",
                     },
                   }}
+                  data-aos="fade-up"
+                  data-aos-duration={theme.animationSpeed.medium}
                 >
                   <Box
                     sx={{
@@ -637,6 +605,8 @@ const Homepage = () => {
                       borderRadius: "5px",
                       overflow: "hidden",
                     }}
+                    data-aos="fade-up"
+                    data-aos-duration={theme.animationSpeed.medium}
                   >
                     <img
                       src={blog.image}
@@ -647,6 +617,8 @@ const Homepage = () => {
                         objectFit: "contain",
                         borderRadius: "5px",
                       }}
+                      data-aos="fade-up"
+                      data-aos-duration={theme.animationSpeed.medium}
                     />
                   </Box>
                 </Box>
@@ -816,18 +788,33 @@ const Homepage = () => {
               <StyledCard>
                 <CardContent
                   sx={{ display: "flex", flexDirection: "column", gap: "10px" }}
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration={theme.animationSpeed.medium}
                 >
-                  <StyledAvatar alt={testimonial.name} src={testimonial.img} />
+                  <StyledAvatar
+                    alt={testimonial.name}
+                    src={testimonial.img}
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration={theme.animationSpeed.medium}
+                  />
                   <Typography
                     variant="h4"
                     color={theme.palette.secondary.main}
                     gutterBottom
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration={theme.animationSpeed.medium}
                   >
                     {testimonial.name}
                   </Typography>
                   <Typography
                     variant="body2"
                     color={theme.palette.secondary.main}
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration={theme.animationSpeed.medium}
                   >
                     {testimonial.review}
                   </Typography>
@@ -840,26 +827,22 @@ const Homepage = () => {
     );
   };
 
-
-
-
-
   const Franchies = () => {
     const images = [f1, f2, f3, f4, f5, f6, f7, f8, f9];
-  
+
     const ImageContainer = styled("div")(({ theme }) => ({
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height: "100px", // Adjust height as needed
+      height: "100px",
     }));
-  
+
     const StyledImage = styled("img")(({ theme }) => ({
-      maxHeight: "100%", // Ensures image fits within the container
-      maxWidth: "100%", // Ensures image fits within the container
-      margin: "0 auto", // Center the image horizontally
+      maxHeight: "100%",
+      maxWidth: "100%",
+      margin: "0 auto",
     }));
-  
+
     const settings = {
       dots: true,
       infinite: true,
@@ -895,7 +878,7 @@ const Homepage = () => {
         },
       ],
     };
-  
+
     return (
       <Container>
         <Box
@@ -903,16 +886,33 @@ const Homepage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: 2, // Add margin if needed
+            marginBottom: 2,
           }}
+          data-aos="zoom-out"
+          data-aos-duration={theme.animationSpeed.medium}
         >
-          <img src={f10} alt="Franchise logo" style={{ maxHeight: "100px", maxWidth: "100%" }} />
+          <img
+            src={f10}
+            alt="Franchise logo"
+            style={{ maxHeight: "100px", maxWidth: "100%" }}
+            data-aos="zoom-out"
+            data-aos-duration={theme.animationSpeed.medium}
+          />
         </Box>
-  
+
         <Slider {...settings}>
           {images.map((img, index) => (
-            <ImageContainer key={index}>
-              <StyledImage src={img} alt={`Image ${index + 1}`} />
+            <ImageContainer
+              key={index}
+              data-aos="zoom-out"
+              data-aos-duration={theme.animationSpeed.medium}
+            >
+              <StyledImage
+                src={img}
+                alt={`Image ${index + 1}`}
+                data-aos="zoom-out"
+                data-aos-duration={theme.animationSpeed.medium}
+              />
             </ImageContainer>
           ))}
         </Slider>
@@ -939,18 +939,18 @@ const Homepage = () => {
             md: theme.customPadding.md,
             lg: theme.customPadding.lg,
           },
-          marginTop:3
+          marginTop: 3,
         }}
       >
         <TestimonialComponent />
       </Box>
-      <Box sx={{      marginTop:3}}>
+      <Box sx={{ marginTop: 3 }}>
         <Franchies />
       </Box>
-      <Box sx={{backgroundColor:"#ffba00"}}>
-      <OurRecentBlogs />
-</Box>
-      
+      <Box sx={{ backgroundColor: "#ffba00" }}>
+        <OurRecentBlogs />
+      </Box>
+
       <ContactUs />
       <Box marginTop={20}></Box>
       <Footer />

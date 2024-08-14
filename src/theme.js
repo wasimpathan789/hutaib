@@ -24,8 +24,8 @@ const theme = createTheme({
       color: "#ffffff",
       fontWeight: 600,
       marginBottom: "28px",
-      fontSize: "4rem", // Default font size
-      lineHeight: 1.2, // Unitless line height
+      fontSize: "4rem",
+      lineHeight: 1.2,
       [baseTheme.breakpoints.up("sm")]: {
         fontSize: "2.5rem",
       },
@@ -41,8 +41,8 @@ const theme = createTheme({
       color: "#ffffff",
       fontWeight: 600,
       marginBottom: "24px",
-      fontSize: "1.75rem", // Default font size
-      lineHeight: 1.3, // Unitless line height
+      fontSize: "1.75rem",
+      lineHeight: 1.3,
       [baseTheme.breakpoints.up("sm")]: {
         fontSize: "2rem",
       },
@@ -58,8 +58,8 @@ const theme = createTheme({
       color: "#30373f",
       fontWeight: 600,
       marginBottom: "20px",
-      fontSize: "3rem", // Default font size
-      lineHeight: 1.4, // Unitless line height
+      fontSize: "3rem",
+      lineHeight: 1.4,
       [baseTheme.breakpoints.up("sm")]: {
         fontSize: "1.75rem",
       },
@@ -74,40 +74,40 @@ const theme = createTheme({
       fontFamily: "Plus Jakarta Sans, Arial, sans-serif",
       color: "#30373f",
       fontWeight: 600,
-      fontSize: "28px", // Default font size
-      lineHeight: 1.4, // Unitless line height
-      letterSpacing:1
+      fontSize: "28px",
+      lineHeight: 1.4,
+      letterSpacing: 1,
     },
     h5: {
       fontFamily: "Plus Jakarta Sans, Arial, sans-serif",
       color: "#30373f",
       fontWeight: 600,
-      fontSize: "20px", // Default font size
-      lineHeight: 1.4, // Unitless line height
+      fontSize: "20px",
+      lineHeight: 1.4,
     },
     h6: {
       fontFamily: "Plus Jakarta Sans, Arial, sans-serif",
       color: "#30373f",
       fontWeight: 400,
-      fontSize:'16px'
+      fontSize: "16px",
     },
     body1: {
       fontFamily: "Plus Jakarta Sans, Arial, sans-serif",
       color: "#616161",
-      fontSize: "15px", // Default font size
-      lineHeight: 1.5, // Unitless line height
+      fontSize: "15px",
+      lineHeight: 1.5,
     },
     body2: {
       fontFamily: "Plus Jakarta Sans, Arial, sans-serif",
       color: "#ffffff",
-      fontSize: "15px", // Default font size
-      lineHeight: 1.5, // Unitless line height
+      fontSize: "15px",
+      lineHeight: 1.5,
     },
     footer: {
       fontFamily: "Plus Jakarta Sans, Arial, sans-serif",
       color: "#FFFFFF",
-      fontSize: "15px", // Default font size
-      lineHeight: 1.5, // Unitless line height
+      fontSize: "15px",
+      lineHeight: 1.5,
     },
   },
   palette: {

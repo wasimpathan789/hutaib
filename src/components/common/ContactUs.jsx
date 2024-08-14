@@ -45,7 +45,11 @@ const ContactUs = () => {
         );
       };
     return (
-      <Box sx={{padding:"40px 0px"}}>
+      <Box
+        sx={{ padding: "40px 0px" }}
+        data-aos="fade-left"
+        data-aos-duration={theme.animationSpeed.medium}
+      >
         <Typography
           sx={{ textAlign: "center" }}
           color={theme.palette.secondary.main}
@@ -145,18 +149,30 @@ const ContactUs = () => {
                     color: theme.palette.primary.main,
                   },
                   backgroundColor: theme.palette.primary.main,
-                  width: "100%",
+                  width: "40%",
                   marginTop: "10px",
                 }}
               >
-                <Typography fontSize={14} color={theme.palette.light.main}>
+                <Typography
+                  fontSize={14}
+                  color={theme.palette.light.main}
+                  data-aos="fade-right"
+                  data-aos-duration={theme.animationSpeed.medium}
+                >
                   Submit
                 </Typography>
               </Button>
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={6} lg={6}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            lg={6}
+            data-aos="fade-left"
+            data-aos-duration={theme.animationSpeed.medium}
+          >
             <MyMapComponent />
           </Grid>
         </Grid>

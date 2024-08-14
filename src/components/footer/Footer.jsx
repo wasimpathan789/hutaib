@@ -19,7 +19,8 @@ const Footer = () => {
     onClick,
     hoverBackgroundColor,
     width,
-
+    animation,
+    animationDuration,
     backgroundColor,
     icon: Icon,
     label,
@@ -41,8 +42,10 @@ const Footer = () => {
         }}
         color={"white"}
         onClick={onClick}
-        data-aos="fade-up"
-        data-aos-duration={theme.animationSpeed.fast}
+        data-aos={animation ? animation : "fade-up"}
+        data-aos-duration={
+          animationDuration ? theme.animationSpeed.fast : "1400"
+        }
       >
         <Icon />
         {/* <span>{label}</span> */}
@@ -131,7 +134,7 @@ const Footer = () => {
                     color={"white"}
                     variant="body2"
                     component={Link}
-                    to={"/"}
+                    to={`/${item.route}`}
                   >
                     <Typography
                       sx={{
@@ -169,26 +172,31 @@ const Footer = () => {
               <SocialMediaButton
                 title={"connectWithFacebook"}
                 backgroundColor={"#3b5998"}
-                icon={FaFacebookF }
-          
+                icon={FaFacebookF}
+                animation={"fade-up"}
+                animationDuration={1400}
               />
               <SocialMediaButton
                 title={"connectWithFacebook"}
-                backgroundColor={"#3b5998"}
+                backgroundColor={"#0a66c2"}
                 icon={FaLinkedinIn}
-   
+                animation={"fade-down"}
+                animationDuration={1400}
               />
               <SocialMediaButton
                 title={"connectWithFacebook"}
-                backgroundColor={"#3b5998"}
+                backgroundColor={"#c5221f"}
                 icon={MdOutlineMail}
-            
+                animation={"fade-up"}
+                animationDuration={1400}
               />
               <SocialMediaButton
                 title={"connectWithFacebook"}
-                backgroundColor={"#3b5998"}
+                backgroundColor={"#dd2a7b"}
                 icon={FaInstagram}
                 label="Home"
+                animation={"fade-down"}
+                animationDuration={1400}
               />
             </Box>
           </Box>
@@ -293,7 +301,11 @@ const Footer = () => {
         }}
         marginTop={4}
       >
-        <Typography textAlign={"center"} color={theme.palette.primary.main}marginTop={3}>
+        <Typography
+          textAlign={"center"}
+          color={theme.palette.primary.main}
+          marginTop={3}
+        >
           Copyright © 2022 Hutaib Electricals , All Rights Reserved
         </Typography>
       </Box>
